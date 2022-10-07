@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width-device-width" , initial-scale="1.0" />
+    <title>RED STORE | E-Commerce Website Design</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?
+    family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="navbar">
+          <div class="logo">
+            <img src="images/logo_red_store.jpg" width="125px" />
+          </div>
+          <nav>
+            <ul id="MenuItems">
+              <li><a href=""><b>Home</b></a></li>
+              <li><a href=""><b>Products</b></a></li>
+              <li><a href=""><b>About</b></a></li>
+              <li><a href=""><b>Contacts</b></a></li>
+              <li><a href=""><b>Account</b></a></li>
+            </ul>
+          </nav>
+          <img src="images/menu (1).png" width="30px" height="30px" />
+          <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" />
+        </div>
+
+        <div class="row">
+          <div class="col-2">
+            <h1>
+              Give your Workout <br />
+              A new style!
+            </h1>
+            <p>
+              Succcess isn't always about greatness. It's all about
+              Consistency.<br /> Consistency and 
+              Hardwork gains Success. Greatness will Come.
+            </p>
+            <a href="" class="btn">Explore now &#8594; </a>
+          </div>
+          <div class="col-2">
+            <img src="images/image1.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--------------featured categories-------------->
+
+    <div class="categories">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-3">
+            <img src="images/category-1.jpg" />
+          </div>
+          <div class="col-3">
+            <img src="images/category-2.jpg" />
+          </div>
+          <div class="col-3">
+            <img src="images/category-3.jpg" />
+          </div>
+          <div class="col-3">
+            <img
+              src="https://images-eu.ssl-images-amazon.com/images/I/61lm-wEy3xL._AC._SR360,460.jpg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--------------featured products-------------->
+    <div class="small-container">
+      <h2 class="title">Featured Products</h2>
+      <div class="row">
+        <div class="col-4">
+          <img
+            src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1661261363/Croma%20Assets/Imaging/Camera%20and%20Camcorders/Images/258422_i3p0de.png/mxw_2048,f_auto"
+          />
+          <h4>Canon EOS M50 Mark II</h4>
+          <div class="ratings">
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>₹56,490.00 | $693.00</p>
+        </div>
+        <div class="col-4">
+          <img src="https://img3.junaroad.com/uiproducts/18509550/zoom_0-1662221244.jpg" />
+          <h4>Black Converse</h4>
+          <div class="ratings">
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>₹4000.00 | $500.00</p>
+        </div>
+
+        <div class="col-4">
+          <img src="data:image/jpeg;base64,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" />
+          <h4>Apple Watch Series 7</h4>
+          <div class="ratings">
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$399.00</p>
+        </div>
+
+        <div class="col-4">
+          <img src="https://m.media-amazon.com/images/I/61vEFIhmAQS._UY879_.jpg" />
+          <h4>Grey Trousers</h4>
+          <div class="ratings">
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+          <p>₹4079.00 | $50.00</p>
+        </div>
+        <div class="col-4">
+          <img src="https://rukminim1.flixcart.com/image/832/832/k7gikcw0/t-shirt/5/y/6/xl-3912-gantino-original-imafpz8yfvpfssyw.jpeg?q=70" />
+          <h4>Navy Blue T-Shirt</h4>
+          <div class="ratings">
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>₹4079.00 | $50.00</p>
+        </div>
+      </div>
+      <h2 class="title">Latest Products</h2>
+      <div class="row">
+        <div class="col-4">
+          <img src="https://www.chatelaine.com/wp-content/uploads/2020/05/how-to-clean-white-sneakers-converse.jpg" />
+          <h4>Converse Unisex Off-white High-Top Sneakers </h4>
+          <div class="ratings">
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            
+          </div>
+          <p>₹8155.85 | $100.00</p>
+        </div>
+        <div class="col-4">
+          <img src="https://m.media-amazon.com/images/I/71fgBcqGaIL._UY879_.jpg" />
+          <h4>Black Puma T-Shirt</h4>
+          <div class="ratings">
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>₹4079.00 | $50.00</p>
+        </div>
+        <div class="col-4">
+          <img src="https://m.media-amazon.com/images/I/71CGnkZRheL._AC_UX575_.jpg" />
+          <h4>Vans Shoes</h4>
+          <div class="ratings">
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>₹4893.51 | $60.00</p>
+        </div>
+        <div class="col-4">
+          <img src="images/3 pair socks.jpg" />
+          <h4>3 Pair Socks</h4>
+          <div class="ratings">
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>₹4079.00 | $50.00</p>
+        </div>
+        <div class="col-4">
+          <img src="https://m.media-amazon.com/images/I/51s7eS+fH1L._UX679_.jpg" />
+          <h4>Black Fossil Watch</h4>
+          <div class="ratings">
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star-o"></i>
+          </div>
+
+          <p>₹4079.00 | $50.00</p>
+        </div>
+        <div class="col-4">
+          <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-14-pro-model-unselect-gallery-1-202209?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1660753619946" />
+          <h4>Apple Iphone 14 Pro</h4>
+          <div class="ratings">
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star"> ⭐ </i>
+            <i class="fa fa-star-o"></i>
+          </div>
+
+          <p>$1099.00</p>
+        </div>
+        <div class="col-4">
+          <img src="https://dlcdnwebimgs.asus.com/gain/FB338DAC-B312-4D25-A7A3-DBDBDBC123CA/w300" />
+          <h4>Asus ROG Phone 6 Pro</h4>
+          <div class="ratings">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+
+          <p>Rs.89,999/-</p>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <img src="https://rukminim1.flixcart.com/image/832/832/jraycnk0/watch/d/h/t/2211769-roadster-original-imafd4h2grzfydjm.jpeg?q=70" />
+            <h4>Roadster Black Watch</h4>
+            <div class="ratings">
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <p>₹4079.00 | $50.00</p>
+          </div>
+          <div class="row">
+          <div class="col-4">
+            <img src="https://m.media-amazon.com/images/I/81guIxQ9oYL._UX569_.jpg" />
+            <h4>U.S Polo white T-shirt</h4>
+            <div class="ratings">
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star-half-o"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <p>₹6525.00 | $80.00</p>
+          </div>
+          <div class="col-4">
+            <img src="https://m.media-amazon.com/images/I/61veXz7oH8L._UY500_.jpg" />
+            <h4>Black Football Watch</h4>
+            <div class="ratings">
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <p>₹4079.00 | $50.00</p>
+          </div>
+          <div class="col-4">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ2XGSeKNquHYCOdLeYWxWzOmuehU8Ys80-ZGE5ZG_p49e6JcvZTvjckPn4V3qkGBdM2oFcH6hgjw&usqp=CAc" />
+            <h4>Grey Puma Running Shoes</h4>
+            <div class="ratings">
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star-half-o"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <p>₹4079.00 | $50.00</p>
+          </div>
+          <div class="col-4">
+            <img src="https://rukminim1.flixcart.com/image/832/832/xif0q/track-pant/z/q/z/m-8424219-hrx-by-hrithik-roshan-original-imafgh3ybmwjg3zc-bb.jpeg?q=70" />
+            <h4>Black Joggers</h4>
+            <div class="ratings">
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+
+	        <div class="col-4">
+            <img src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?cs=srgb&dl=pexels-math-90946.jpg&fm=jp" />
+            <h4>Camera</h4>
+            <div class="ratings">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+
+            <p>$50.00</p>
+            <p>₹4079.00 | $50.00</p>
+          </div>
+          
+          <div class="col-4">
+            <img src="https://m.media-amazon.com/images/I/310u7t43CCL.jpg" />
+            <h4>Nike Men's Court Legacy Suede Sneaker</h4>
+            <div class="ratings">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <div class="col-4">
+              <img src=" https://cdn.shopify.com/s/files/1/0057/8938/4802/products/616b4ead-bbd9-4a16-aeab-8d331a16f697_600x.png?v=1642405569" />
+              <h4> boat Earpods</h4>
+              <div class="ratings">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+                <i class="fa fa-star-o"></i>
+              </div>
+            <p>₹4744.00 | $57.75</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---------Offer---------->
+    <div class="offer">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-2">
+            <img src="images/miband4.jpg" class="offer-img" />
+          </div>
+          <div class="col2">
+            <p>Exclusively Available on Red Store !!</p>
+            <p>Exclusively Available on Red Store</p>
+            <h1>Smart Band</h1>
+            <small
+              >The Mi Band 4 Features 39.9% Larger(than Mi band 3) AMOLED Color
+              full touch display with adjustable brightness, so everything is
+              very clear as can be.
+            </small>
+            <a href="" class="btn">BUY NOW &#8594; </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---------Testimonial-------->
+    <div class="testimonial">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-3">
+            <i class="fa fa-quote-left"> </i>
+
+            <p>
+              Lorem Ipsum is Simply dummy Text Of Printing and typesetting
+              industry. Loren Ipsum has been the Industry's Standard Dummy Text
+              Over
+            </p>
+            <div class="ratings">
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <img src="images/user-1.png" />
+            <h3>Sean Parker</h3>
+          </div>
+          <div class="col-3">
+            <i class="fa fa-quote-left"> </i>
+
+            <p>
+              Lorem Ipsum is Simply dummy Text Of Printing and typesetting
+              industry . Loren Ipsum has been the Industry's Standard Dummy Text
+              Over
+            </p>
+            <div class="ratings">
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <img src="images/user-2.png" />
+            <h3>Nike mike</h3>
+          </div>
+          <div class="col-3">
+            <i class="fa fa-quote-left"> </i>
+
+            <p>
+              Lorem Ipsum is Simply dummy Text Of Printing and typesetting
+              industry . Loren Ipsum has been the Industry's Standard Dummy Text
+              Over
+            </p>
+            <div class="ratings">
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star"> ⭐ </i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <img src="images/user-3.png" />
+            <h3>Scarlet john</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---------Brands----------->
+    <div class="brands">
+      <div class="small-conntainer">
+        <div class="row">
+          <div class="col-5">
+            <img src="images/logo-godrej.png" />
+          </div>
+          <div class="col-5">
+            <img src="images/logo-oppo.png" />
+          </div>
+          <div class="col-5">
+            <img src="images/logo-coca-cola.png" />
+          </div>
+          <div class="col-5">
+            <img src="images/logo-paypal.png" />
+          </div>
+          <div class="col-5">
+            <img src="images/logo-philips.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---------------Footer----------->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>Download App For Android and ios mobile phone</p>
+            <div class="app-logo">
+              <img src="images/play-store.png" />
+              <img src="images/app-store.png" />
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img src="images/logo-white.png" />
+            <p>
+              Our Purpose Is to Sustainably Make the Pleasure Android Benifits
+              of Sports Accesible to the Many.
+            </p>
+          </div>
+          <div class="footer-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Blog Post</li>
+              <li>Return Policy</li>
+              <li>Join Affilate</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h3>Follow Us</h3>
+            <ul>
+              <li style="display: inline;"><img src="images/facebook black.png" style="height:30px;width:30px;"></li> 
+              <li style="display: inline;"> <img src="images/twitter.png" style="height:30px;width:30px;"></li>
+              <li style="display: inline;"><img src="images/instagram_new.png" style="height:30px;width:30px;"></li>
+              <li style="display: inline;"><img src="images/youtube.png" style="height:30px;width:30px;"></li>
+            </ul>
+          </div>
+        </div>
+        <hr/>
+        <p class="copyright" style="color: black;"><b>Copyright 2022 - Novus Neurons </b></p>
+      </div>
+    </div>
+    <!--------------js for toggle menu---------->
+    <script>
+      var MenuItems = document.getElementById(MenuItems);
+      MenuItems.style.maxHeight = "0px";
+
+      function menutoggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+          MenuItems.style.maxHeight == "200px";
+        } else {
+          MenuItems.style.maxHeight == "0px";
+        }
+      }
+    </script>
+  </body>
+</html>
