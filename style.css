@@ -115,7 +115,7 @@ p{
 }
 .col-4{
     flex-basis: 25%;
-    padding: 10px;
+    padding: 25px;
     min-width: 200px;
     margin-bottom: 50px;
     transition: transform 0.5s;
@@ -193,7 +193,7 @@ p{
 }
 .fa-quote-left{
     font-size: 34px;
-    color: #ff523b;
+    color: #f6705f;
 }
 .col-3 {
     font-size: 12px;
