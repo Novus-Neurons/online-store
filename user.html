@@ -4,13 +4,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">  
 <title>Redstore Login Page </title>  
 <style>   
+*{
+    
+}
 Body {  
   font-family: Calibri, Helvetica, sans-serif;  
   background-color:rgb(165, 95, 95) (214, 213, 213);  
 }  
 button {   
        background-color: #130dc5;   
-       width: 100%;  
+       width: 50%;  
         color: rgb(245, 243, 243);   
         padding: 15px;   
         margin: 10px 0px;   
@@ -21,7 +24,7 @@ button {
         border: 3px solid #f1f1f1;   
     }   
  input[type=text], input[type=password] {   
-        width: 100%;   
+        width: 50%;   
         margin: 8px 0;  
         padding: 12px 20px;   
         display: inline-block;   
@@ -39,15 +42,20 @@ button {
         
      
  .container {   
-        padding: 25px;   
-        background-color: rgb(202, 52, 28);  
+        background-color: rgba(11, 24, 45, 0.534);  
+        display:flex;
+        flex-direction: column;
+        /* justify-self: center; */
+        align-items: center;
+        padding:100px;
+        
     }   
 </style>   
 </head>    
 <body>    
-    <center> <h1> Customer Login </h1> </center>   
     <form>  
         <div class="container">   
+            <center> <h1> Customer Login </h1> </center>   
             <label>Username : </label>   
             <input type="text" placeholder="Enter Username" name="username" required>  
             <label>Password : </label>   
